@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/sumeet2608/devops-cicd-project.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 dir('node-express-hello-world') {
@@ -24,5 +18,6 @@ pipeline {
                 }
             }
         }
+
     }
 }
